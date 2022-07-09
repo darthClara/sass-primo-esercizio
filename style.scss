@@ -1,0 +1,38 @@
+%centratura {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5%;
+}
+
+body {
+    @extend %centratura;
+    div {
+        @extend %centratura;
+        border: 2px solid red;
+        flex-direction: column;
+        h1 {
+            @extend %centratura;
+            text-decoration: underline;
+            text-decoration-color: blue;
+            color: green;
+        }
+        section {
+            @extend %centratura;
+                height: 90px;
+            article {
+                height: 100%;
+                width: 25%;
+                @extend %centratura;
+                border: 2px solid green;
+                color: blue;
+                box-sizing: border-box;
+                font-size: 1vw;
+                overflow: hidden;
+            }
+            article:nth-child(even) {
+                color: red;
+            }
+        }
+    }
+}
